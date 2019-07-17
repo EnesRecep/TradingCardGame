@@ -5,37 +5,27 @@ import java.util.ArrayList;
 /**
  * Created by Enes Recep on 17.07.2019.
  */
-public class Monster {
+public class Spell {
 
 
     private String name;
     private ArrayList<Civilization> civilization;
-    private ArrayList<Race> race;
     private int level;
     private ArrayList<String> cardText;
     private ArrayList<String> flavorText;
     private Type type;
 
-    private int power;
 
-    public Monster() {
+    public Spell() {
     }
 
-    public int getPower() {
-        return power;
-    }
-
-    public Monster setPower(int power) {
-        this.power = power;
-        return this;
-    }
 
 
     public String getName() {
         return name;
     }
 
-    public Monster setName(String name) {
+    public Spell setName(String name) {
         this.name = name;
         return this;
 
@@ -45,17 +35,8 @@ public class Monster {
         return civilization;
     }
 
-    public Monster setCivilization(Civilization civilization) {
+    public Spell setCivilization(Civilization civilization) {
         this.civilization.add(civilization);
-        return this;
-    }
-
-    public ArrayList<Race> getRace() {
-        return race;
-    }
-
-    public Monster setRace(Race race) {
-        this.race.add(race);
         return this;
     }
 
@@ -63,7 +44,7 @@ public class Monster {
         return level;
     }
 
-    public Monster setLevel(int level) {
+    public Spell setLevel(int level) {
         this.level = level;
         return this;
     }
@@ -72,7 +53,7 @@ public class Monster {
         return cardText;
     }
 
-    public Monster setCardText(String cardText) {
+    public Spell setCardText(String cardText) {
         this.cardText.add(cardText);
         return this;
     }
@@ -81,7 +62,7 @@ public class Monster {
         return flavorText;
     }
 
-    public Monster setFlavorText(String flavorText) {
+    public Spell setFlavorText(String flavorText) {
         this.flavorText.add(flavorText);
         return this;
     }
@@ -90,12 +71,12 @@ public class Monster {
         return type;
     }
 
-    public Monster setType(Type type) {
+    public Spell setType(Type type) {
         this.type = type;
         return this;
     }
 
-    public Monster build(){
+    public Spell build(){
         return this;
     }
 }
