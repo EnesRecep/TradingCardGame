@@ -1,6 +1,6 @@
 package Game;
 
-import CardModel.Deck;
+import CardModel.Card;
 
 import java.util.ArrayList;
 
@@ -13,21 +13,20 @@ public class ShieldZone {
 
     public ShieldZone(){}
 
-    /**
-     *
-     * @param deck
-     *
-     * Gets the card on top of the deck
-     */
-    public void addShield(Deck deck){
-        shields.add(deck.getTop());
+    public void addShield(Card card){
+        shields.add(card);
     }
 
-    public Card deleteShield(int index){
-        Card card = shields.get(index);
-        shields.remove(index);
+    /*
+    Get shield by index
+    This is used when user selects a shield to destroy (might not be needed(Card object might be send to remove), then change to get Card param.)
+     */
+    public Card getShield(int index){
+        return shields.get(index);
+    }
 
-        return card;
+    public void removeShield(Card card){
+        shields.remove(card);
     }
 
 }

@@ -1,5 +1,7 @@
 package Game;
 
+import CardModel.Card;
+
 import java.util.ArrayList;
 
 /**

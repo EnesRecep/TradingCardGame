@@ -1,5 +1,6 @@
 package SkillUtils;
 
+import CardModel.Card;
 import Game.Game;
 import Game.Player;
 
@@ -12,7 +13,8 @@ public class BreakShield implements Skill{
         int shieldIndex = 0;    //TODO: Will be taken from user
         Player opponentPlayer = Game.getInstance().getCurrentPlayer().getOpponentPlayer();
         //shieldIndex = getTargetShield;
-        Card brokenShield = opponentPlayer.getShieldZone().deleteShield(shieldIndex);
+        Card brokenShield = opponentPlayer.getShieldZone().getShield(shieldIndex);
+        opponentPlayer.getShieldZone().removeShield(brokenShield);
         //TODO: If broken shield is a spell card and has a shield blast ability player can choose to execute the ability
         opponentPlayer.getHand().addCard(brokenShield);
     }
