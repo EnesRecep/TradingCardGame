@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by Enes Recep on 17.07.2019.
  */
-public class Monster {
+public class Card {
 
 
     private String name;
@@ -15,17 +15,16 @@ public class Monster {
     private ArrayList<String> cardText;
     private ArrayList<String> flavorText;
     private Type type;
-
     private int power;
 
-    public Monster() {
+    public Card() {
     }
 
     public int getPower() {
         return power;
     }
 
-    public Monster setPower(int power) {
+    public Card setPower(int power) {
         this.power = power;
         return this;
     }
@@ -35,7 +34,7 @@ public class Monster {
         return name;
     }
 
-    public Monster setName(String name) {
+    public Card setName(String name) {
         this.name = name;
         return this;
 
@@ -45,7 +44,7 @@ public class Monster {
         return civilization;
     }
 
-    public Monster setCivilization(Civilization civilization) {
+    public Card addCivilization(Civilization civilization) {
         this.civilization.add(civilization);
         return this;
     }
@@ -54,7 +53,7 @@ public class Monster {
         return race;
     }
 
-    public Monster setRace(Race race) {
+    public Card setRace(Race race) {
         this.race.add(race);
         return this;
     }
@@ -63,7 +62,7 @@ public class Monster {
         return level;
     }
 
-    public Monster setLevel(int level) {
+    public Card setLevel(int level) {
         this.level = level;
         return this;
     }
@@ -72,7 +71,7 @@ public class Monster {
         return cardText;
     }
 
-    public Monster setCardText(String cardText) {
+    public Card addCardText(String cardText) {
         this.cardText.add(cardText);
         return this;
     }
@@ -81,7 +80,7 @@ public class Monster {
         return flavorText;
     }
 
-    public Monster setFlavorText(String flavorText) {
+    public Card addFlavorText(String flavorText) {
         this.flavorText.add(flavorText);
         return this;
     }
@@ -90,12 +89,12 @@ public class Monster {
         return type;
     }
 
-    public Monster setType(Type type) {
+    public Card setType(Type type) {
         this.type = type;
         return this;
     }
 
-    public Monster build(){
+    public Card build(){
         return this;
     }
 }

@@ -19,8 +19,7 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 
 
-        MonsterCardClassCreator creator = new MonsterCardClassCreator();
-
+        MonsterCardCreator.create();
 
 
 
