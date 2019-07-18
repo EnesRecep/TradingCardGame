@@ -5,5 +5,5 @@ package CardModel;
  */
 public enum Type {
 
-    Spell, Monster
+    Spell, Creature, EvolutionCreature
 }

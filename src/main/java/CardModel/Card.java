@@ -9,13 +9,14 @@ public class Card {
 
 
     private String name;
-    private ArrayList<Civilization> civilization;
-    private ArrayList<Race> race;
+    private ArrayList<Civilization> civilization = new ArrayList<>();
+    private ArrayList<String> race = new ArrayList<>();
     private int level;
-    private ArrayList<String> cardText;
-    private ArrayList<String> flavorText;
+    private ArrayList<String> cardText = new ArrayList<>();
+    private ArrayList<String> flavorText = new ArrayList<>();
     private Type type;
     private int power;
+
 
     public Card() {
     }
@@ -49,11 +50,11 @@ public class Card {
         return this;
     }
 
-    public ArrayList<Race> getRace() {
+    public ArrayList<String> getRace() {
         return race;
     }
 
-    public Card setRace(Race race) {
+    public Card addRace(String race) {
         this.race.add(race);
         return this;
     }
@@ -96,5 +97,20 @@ public class Card {
 
     public Card build(){
         return this;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "name='" + name + '\'' +
+                ", civilization=" + civilization +
+                ", race=" + race +
+                ", level=" + level +
+                ", cardText=" + cardText +
+                ", flavorText=" + flavorText +
+                ", type=" + type +
+                ", power=" + power +
+                '}' + "\n";
     }
 }
