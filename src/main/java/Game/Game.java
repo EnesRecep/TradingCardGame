@@ -11,6 +11,7 @@ public class Game {
 
     private Player playerOne;
     private Player playerTwo;
+    private Player currentPlayer;
 
     private static Game gameInstance;
 
@@ -24,6 +25,14 @@ public class Game {
         }
 
         return gameInstance;
+    }
+
+    public Player getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    public void setCurrentPlayer(Player currentPlayer) {
+        this.currentPlayer = currentPlayer;
     }
 
     public Player getPlayerOne() {
@@ -40,5 +49,10 @@ public class Game {
 
     public void setPlayerTwo(Player playerTwo) {
         this.playerTwo = playerTwo;
+    }
+
+    public void initializeGame(){
+        playerOne.setOpponentPlayer(playerTwo);
+        playerTwo.setOpponentPlayer(playerOne);
     }
 }

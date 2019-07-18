@@ -8,10 +8,19 @@ import CardModel.Deck;
 public class Player {
 
     private Deck playerDeck;
-    private Shield shield;
+    private ShieldZone shieldZone;
     private Hand hand;
     private Zone zone;
     private ManaZone manaZone;
+    private Player opponentPlayer;
+
+    public Player getOpponentPlayer() {
+        return opponentPlayer;
+    }
+
+    public void setOpponentPlayer(Player opponentPlayer) {
+        this.opponentPlayer = opponentPlayer;
+    }
 
     public Deck getPlayerDeck() {
         return playerDeck;
@@ -21,12 +30,12 @@ public class Player {
         this.playerDeck = playerDeck;
     }
 
-    public Shield getShield() {
-        return shield;
+    public ShieldZone getShieldZone() {
+        return shieldZone;
     }
 
-    public void setShield(Shield shield) {
-        this.shield = shield;
+    public void setShieldZone(ShieldZone shieldZone) {
+        this.shieldZone = shieldZone;
     }
 
     public Hand getHand() {

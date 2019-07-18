@@ -10,6 +10,9 @@ public class Deck {
     private ArrayList<Card> cards;
 
     public Card getTop(){
-        return cards.get(0);
+
+        Card card = cards.get(0);
+        cards.remove(0);
+        return card;
     }
 }
