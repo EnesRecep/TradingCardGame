@@ -12,7 +12,15 @@ public class Deck {
     public Card getTop(){
 
         Card card = cards.get(0);
-        cards.remove(0);
+        removeCard(card);
         return card;
+    }
+
+    public void addCard(Card card){
+        cards.add(card);
+    }
+
+    public void removeCard(Card card){
+        cards.remove(card);
     }
 }

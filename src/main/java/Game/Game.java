@@ -12,6 +12,7 @@ public class Game {
     private Player playerOne;
     private Player playerTwo;
     private Player currentPlayer;
+    private Turn turn;
 
     private static Game gameInstance;
 
@@ -54,5 +55,8 @@ public class Game {
     public void initializeGame(){
         playerOne.setOpponentPlayer(playerTwo);
         playerTwo.setOpponentPlayer(playerOne);
+        currentPlayer = playerOne;
+        turn = new Turn();
+        turn.setTurnState(new ManaState(turn));
     }
 }
