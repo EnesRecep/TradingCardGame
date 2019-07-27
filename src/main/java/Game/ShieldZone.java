@@ -17,10 +17,18 @@ public class ShieldZone {
         shields.add(card);
     }
 
-    /*
-    Get shield by index
-    This is used when user selects a shield to destroy (might not be needed(Card object might be send to remove), then change to get Card param.)
-     */
+    public ArrayList<Card> getShields() {
+        return shields;
+    }
+
+    public void setShields(ArrayList<Card> shields) {
+        this.shields = shields;
+    }
+
+    public void breakShield(Card targetShield){
+        shields.remove(targetShield);
+    }
+
     public Card getShield(int index){
         return shields.get(index);
     }

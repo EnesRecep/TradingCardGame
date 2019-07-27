@@ -13,6 +13,7 @@ public class Player {
     private Zone zone;
     private ManaZone manaZone;
     private Player opponentPlayer;
+    private Graveyard graveyard;
 
     public Player getOpponentPlayer() {
         return opponentPlayer;
@@ -60,6 +61,14 @@ public class Player {
 
     public void setManaZone(ManaZone manaZone) {
         this.manaZone = manaZone;
+    }
+
+    public Graveyard getGraveyard() {
+        return graveyard;
+    }
+
+    public void setGraveyard(Graveyard graveyard) {
+        this.graveyard = graveyard;
     }
 
     public void initializeGame(){
